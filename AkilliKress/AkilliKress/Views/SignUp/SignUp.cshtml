@@ -1,0 +1,172 @@
+﻿@model AkilliKress.Models.Kullanici
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Akıllı Kreş</title>
+    <link rel="stylesheet" href="~/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/style.css" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Sign Up</title>
+    <style>
+        #login-div {
+            position: absolute;
+            left: 40%;
+            top: 40%;
+            border: 1px solid #ccc;
+            padding: 10px 10px;
+        }
+
+        .field-validation-error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <nav id="mainNavigationBar"
+         class="navbar navbar-expand-lg navbar-light sticky-top">
+        <a class="navbar-brand" href="index.html">
+            <img src="images/logo.png"
+                 width="30"
+                 height="30"
+                 class="d-inline-block align-top"
+                 alt="" />
+            Akıllı Kreş
+        </a>
+        <button class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item ">
+                    <a class="nav-link" href="index.html">Ana Sayfa<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#hakkimizdaDiv">Hakkımızda</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#vizyonumuzDiv">Vizyonumuz</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#fotografGalerisiDiv">Fotoğraf Galerisi</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#iletisimDiv">İletişim</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="/SignUp/SignUp">Kayıt Ol</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="/Login/Login">Giriş Yap</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Div -->
+
+    <div id="kayitOlDiv" class="container-fluid">
+        <div class="row">
+            <div id="kayitOlWelcomeDiv"
+                 class="container col-12 col-sm-10 col-md-8 col-lg-6 ml-auto ">
+                
+                    @using (Html.BeginForm("SignUp", "SignUp", FormMethod.Get))
+                    {
+                        <table>
+                            <tr>
+                                <td></td>
+                                <td style="text-decoration:underline">Akıllı Kreş</td>
+                            </tr>
+                            <tr>
+                                <td>@Html.Label("Adınız:")</td>
+                                <td>@Html.EditorFor(Model => Model.Ad)</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>@Html.ValidationMessageFor(Model => Model.Ad)</td>
+                            </tr>
+                            <tr>
+                                <td>@Html.Label("Soyadınız:")</td>
+                                <td>@Html.EditorFor(Model => Model.Soyad)</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>@Html.ValidationMessageFor(Model => Model.Soyad)</td>
+                            </tr>
+                            <tr>
+                                <td>@Html.Label("TC Kimlik Numaranız:")</td>
+                                <td>@Html.EditorFor(Model => Model.TcNo)</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>@Html.ValidationMessageFor(Model => Model.TcNo)</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @Html.Label("Kullanıcı Adı:")
+                                </td>
+                                <td>
+                                    @Html.EditorFor(Model => Model.KullaniciAdi)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>@Html.ValidationMessageFor(Model => Model.KullaniciAdi)</td>
+                            </tr>
+                            <tr>
+                                <td>@Html.Label("Şifre:")</td>
+                                <td>@Html.EditorFor(Model => Model.Sifre)</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>@Html.ValidationMessageFor(Model => Model.Sifre)</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @Html.RadioButtonFor(Model => Model.KullaniciTuru, "Ö") @Html.Label("Öğretmen")
+                                    @Html.RadioButtonFor(Model => Model.KullaniciTuru, "V")@Html.Label("Veli")
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>@Html.ValidationMessageFor(Model => Model.KullaniciTuru)</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <a href="/Login/Login" name="link" style="color:blue">Giriş Yap</a>
+                                    <input type="submit" name="name" value="Ekle" />
+                                    <input type="reset" name="name" value="Temizle" />
+                                </td>
+                            </tr>
+
+                        </table>
+
+                    }
+                </div>
+
+            </div>
+        </div>
+   
+
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+</body>
+</html>
+
+

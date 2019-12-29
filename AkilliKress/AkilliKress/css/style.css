@@ -1,0 +1,158 @@
+html {
+  scroll-behavior: smooth;
+}
+
+
+#mainNavigationBar {
+  background-color: #76D7C4;
+  color: black;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 15px 50px 15px 50px;
+}
+
+.scrolled {
+  background-color: wheat !important;
+  z-index: 5 !important;
+  transition: 0.3s;
+  top: -15px;
+}
+
+#mainDiv {
+  background-image: url("../images/kres.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 653px;
+}
+
+#welcomeDiv {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: black;
+  border: 1px solid none;
+  border-radius: 10px;
+  padding: 40px;
+  margin-top: 150px;
+}
+
+#kayitOlWelcomeDiv {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: black;
+  border: 1px solid none;
+  border-radius: 10px;
+  padding: 40px;
+  margin-top: 44px;
+}
+
+#girisYapWelcomeDiv {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: black;
+  border: 1px solid none;
+  border-radius: 10px;
+  padding: 40px;
+  margin-top: 150px;
+}
+
+#welcomeHeader {
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+#welcomeText {
+  font-size: 18px;
+  font-style: italic;
+}
+
+#hakkimizdaDiv {
+  background-image: url("../images/hakkimizda.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 723px;
+}
+
+#vizyonumuzDiv {
+  background-image: url("../images/vizyonumuz.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 723px;
+}
+
+#fotografGalerisiDiv {
+  background-image: url("../images/galeri.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 1100px;
+}
+
+.galeriResim {
+  width: 250px !important;
+  height: 200px !important;
+  border: 1px solid grey;
+  border-radius: 15px;
+  margin-bottom: 10px;
+}
+
+#iletisimDiv {
+  background-image: url("../images/iletisim.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 723px;
+}
+
+#kayitOlDiv {
+  background-image: url("../images/login.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 652px;
+}
+
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) {
+  #welcomeDiv {
+    margin-top: 50px;
+  }
+
+  #welcomeText {
+    font-size: 16px;
+  }
+
+  #mainDiv {
+    height: 483px;
+  }
+
+  #hakkimizdaDiv {
+    height: 483px;
+  }
+
+  #vizyonumuzDiv {
+    height: 483px;
+  }
+
+  #fotografGalerisiDiv {
+    height: 583px;
+  }
+
+  #iletisimDiv {
+    height: 483px;
+  }
+
+  .galeriResim {
+    width: 125px !important;
+    height: 100px !important;
+
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {}

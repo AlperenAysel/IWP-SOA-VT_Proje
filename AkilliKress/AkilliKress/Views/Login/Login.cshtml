@@ -1,0 +1,169 @@
+﻿@model AkilliKress.Models.Kullanici
+@{
+    Layout = null;
+}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Akıllı Kreş</title>
+    <link rel="stylesheet" href="~/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/style.css" />
+</head>
+<body>
+    <!-- Image and text -->
+    <nav id="mainNavigationBar"
+         class="navbar navbar-expand-lg navbar-light sticky-top">
+        <a class="navbar-brand" href="index.html">
+            <img src="~/images/logo.png"
+                 width="30"
+                 height="30"
+                 class="d-inline-block align-top"
+                 alt="" />
+            Akıllı Kreş
+        </a>
+        <button class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item ">
+                    <a class="nav-link" href="/Home/Index">Ana Sayfa<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Home/Index#hakkimizdaDiv">Hakkımızda</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Home/Index#vizyonumuzDiv">Vizyonumuz</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Home/Index#fotografGalerisiDiv">Fotoğraf Galerisi</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Home/Index#iletisimDiv">İletişim</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link " href="/SignUp/SignUp">Kayıt Ol</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Giriş Yap</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Div -->
+
+    <div id="kayitOlDiv" class="container-fluid">
+        <div class="row">
+            <div id="girisYapWelcomeDiv"
+                 class="container col-12 col-sm-10 col-md-8 col-lg-6 ml-auto ">
+                @*<form>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Kullanıcı Adı</label>
+                <input type="text"
+                       class="form-control"
+                       id="exampleInputPassword1"
+                       placeholder="Kullanıcı adınızı giriniz..." />
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Şifre</label>
+                <input type="text"
+                       class="form-control"
+                       id="exampleInputPassword1"
+                       placeholder="Şifrenizi giriniz..." />
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input"
+                       type="radio"
+                       name="inlineRadioOptions"
+                       id="inlineRadio1"
+                       value="option1" />
+                <label class="form-check-label" for="inlineRadio1">Öğretmen</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input"
+                       type="radio"
+                       name="inlineRadioOptions"
+                       id="inlineRadio2"
+                       value="option2" />
+                <label class="form-check-label" for="inlineRadio2">Veli</label>
+            </div>
+            <br />
+            <br />
+            <button type="submit" class="btn btn-primary">Giriş Yap</button>
+        </form>*@
+                <div id="login-div">
+                    @using (Html.BeginForm("Login", "Login", FormMethod.Get))
+                    {
+                        <table>
+                            <tr>
+                                <td></td>
+                                <td style="text-decoration:underline">Akıllı Kreş</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @Html.Label("Kullanıcı Adı:")
+                                </td>
+                                <td>
+                                    @Html.EditorFor(Model => Model.KullaniciAdi)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>@Html.ValidationMessageFor(Model => Model.KullaniciAdi)</td>
+                            </tr>
+                            <tr>
+                                <td>@Html.Label("Şifre:")</td>
+                                <td>@Html.EditorFor(Model => Model.Sifre)</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>@Html.ValidationMessageFor(Model => Model.Sifre)</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @Html.RadioButtonFor(Model => Model.KullaniciTuru, "Ö") @Html.Label("Öğretmen")
+                                    @Html.RadioButtonFor(Model => Model.KullaniciTuru, "V")@Html.Label("Veli")
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>@Html.ValidationMessageFor(Model => Model.KullaniciTuru)</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <input type="submit" name="name" value="Giriş Yap" />
+                                    <input type="reset" name="name" value="Temizle" />
+                                </td>
+                            </tr>
+
+                        </table>
+
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="~/js/jquery-3.3.1.slim.min.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/js/popper.min.js"></script>
+    <script src="~/js/script.js"></script>
+    <script></script>
+</body>
+</html>

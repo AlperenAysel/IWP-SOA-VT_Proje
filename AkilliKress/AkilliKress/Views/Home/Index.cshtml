@@ -1,0 +1,231 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Akıllı Kreş</title>
+    <link rel="stylesheet" href="~/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/style.css" />
+</head>
+<body>
+    <!-- Image and text -->
+    <nav id="mainNavigationBar"
+         class="navbar navbar-expand-lg navbar-light sticky-top">
+        <a class="navbar-brand" href="#">
+            <img src="images/logo.png"
+                 width="30"
+                 height="30"
+                 class="d-inline-block align-top"
+                 alt="" />
+            Akıllı Kreş
+        </a>
+        <button class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Ana Sayfa<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#hakkimizdaDiv">Hakkımızda</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#vizyonumuzDiv">Vizyonumuz</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#fotografGalerisiDiv">Fotoğraf Galerisi</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#iletisimDiv">İletişim</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link " href="/SignUp/SignUp">Kayıt Ol</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="/Login/Login">Giriş Yap</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Div -->
+
+    <div id="mainDiv" class="container-fluid">
+        <div class="row">
+            <div id="welcomeDiv"
+                 class="container col-12 col-sm-10 col-md-8 col-lg-6 ml-auto text-center">
+                <h1 id="welcomeHeader" class="font-weight-bolder">
+                    Akıllı Kreş'e Hoşgeldiniz!
+                </h1>
+                <br />
+                <span id="welcomeText" class="text-center">
+                    Çocuklarınızın evi gibi rahat olduğu, eğlenerek öğrenip harika vakit
+                    geçirebileceği <br />
+                    ve velilerin de mutlu ve huzurlu bir şekilde gündelik
+                    <br />
+                    işlerine devam edebileceğini temin ederiz.
+                </span>
+                <br /><br /><br />
+                <button type="button" class="btn btn-primary">
+                    Bize Ulaşın
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Second Div -->
+    <div id="hakkimizdaDiv" class="container-fluid">
+        <div class="row">
+            <div id="welcomeDiv"
+                 class="container col-12 col-sm-10 col-md-8 col-lg-6 ml-auto text-center">
+                <h1 id="welcomeHeader" class="font-weight-bolder">
+                    Hakkımızda
+                </h1>
+                <br />
+                <span id="welcomeText" class="text-center">
+                    Akıllı Kreş, 2019 yılında geliştirilmesine başlanmış <br />
+                    2020 de kurulumu için ilk adımlar atılacak olan <br />
+                    Smart Cities projesidir. <br />
+                    <br />
+
+                    <span class="text-italic">
+                        Projenin amacı, ebeveynlerin çocukları hakkındaki <br />
+                        her bilgiye kolayca ve anında internet üzeinden <br />
+                        online ortamda ulaşmasını sağlayarak çocuklarının <br />
+                        gelişimlerini yakından takip etmesine <br />
+                        yardımcı olmaktır.
+                    </span>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Third Div -->
+    <div id="vizyonumuzDiv" class="container-fluid">
+        <div class="row">
+            <div id="welcomeDiv"
+                 class="container col-12 col-sm-10 col-md-8 col-lg-6 ml-auto text-center">
+                <h1 id="welcomeHeader" class="font-weight-bolder">
+                    Vizyonumuz
+                </h1>
+                <br />
+                <span id="welcomeText" class="text-center">
+                    Akıllı Kreş olarak vizyonumuz, gelecek nesilleri <br />
+                    küçük yaşlardan itibaren okula ve okul ortamına <br />
+                    hazır hale getirmek, eğlendirerek ve sevdirerek <br />
+                    kreş içerisinde güzel vakit geçirmelerini sağlayarak <br />
+                    onlara okulu ve eğitimi sevdirmektir. <br />
+                    <br />
+
+                    Bunları yaparken de ebeveynleri her konuda ve her <br />
+                    koşulda bilgilendirerek çocuklarının gelişimlerini <br />
+                    en yakından incelemelerine fırsat sunmaktır.
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Fourth Div -->
+    <div id="fotografGalerisiDiv" class="container-fluid">
+        <div class="row">
+            <div id="welcomeDiv"
+                 class="container col-12 col-sm-11 col-md-10 col-lg-8 ml-auto text-center">
+                <h1 id="welcomeHeader" class="font-weight-bolder">
+                    Fotoğraf Galerisi
+                </h1>
+                <br />
+                <div class="row justify-content-center">
+                    <div class="col-4">
+                        <img src="~/images/1.jpg"
+                             alt="..."
+                             class=" galeriResim  img-responsive" />
+                    </div>
+                    <div class=" col-4">
+                        <img src="~/images/2.jpg"
+                             alt="..."
+                             class="galeriResim img-responsive" />
+                    </div>
+                    <div class=" col-4">
+                        <img src="~/images/3.jpg"
+                             alt="..."
+                             class="galeriResim img-responsive" />
+                    </div>
+                    <div class=" col-4">
+                        <img src="~/images/4.jpg"
+                             alt="..."
+                             class="galeriResim img-responsive" />
+                    </div>
+                    <div class=" col-4">
+                        <img src="~/images/5.jpg"
+                             alt="..."
+                             class="galeriResim img-responsive" />
+                    </div>
+                    <div class=" col-4">
+                        <img src="~/images/6.jpg"
+                             alt="..."
+                             class="galeriResim img-responsive" />
+                    </div>
+                    <div class=" col-4">
+                        <img src="~/images/7.jpg"
+                             alt="..."
+                             class="galeriResim img-responsive" />
+                    </div>
+                    <div class=" col-4">
+                        <img src="~/images/8.jpg"
+                             alt="..."
+                             class="galeriResim img-responsive" />
+                    </div>
+                    <div class=" col-4">
+                        <img src="~/images/9.jpg"
+                             alt="..."
+                             class="galeriResim img-responsive" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Fifth Div -->
+    <div id="iletisimDiv" class="container-fluid">
+        <div class="row">
+            <div id="welcomeDiv"
+                 class="container col-12 col-sm-10 col-md-8 col-lg-6 ml-auto text-center">
+                <h1 id="welcomeHeader" class="font-weight-bolder">
+                    İletişim
+                </h1>
+                <br />
+                <span id="welcomeText" class="text-center">
+                    Mail adreslerimizden veya sosyal medya <br />
+                    hesaplarımızdan bize ulaşabilirsiniz. <br /><br />
+                    akillikres@gmail.com <br />
+                    info@akillikres.com <br />
+                    <br />
+                    facebook.com/akillikres <br />
+                    twitter.com/akillikres <br />
+                    instagram.com/akillikres <br />
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <script src="~/js/jquery-3.3.1.slim.min.js"></script>
+    <script src="~/js/popper.min.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/js/script.js"></script>
+    <script></script>
+</body>
+</html>
